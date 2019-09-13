@@ -5,16 +5,19 @@ using UnityEngine;
 public class Buttoninput : MonoBehaviour
 {
     public bool left;
+    public FiremanController fireman;
+
+
     private void OnMouseDown()
     {
 
         if (left)
         {
-            Debug.Log("touch!");
+            fireman.OnLeftPressed();
         }
         else
         {
-            Debug.Log("touch right!");
+            fireman.OnRightPressed();
         }
     }
 }
